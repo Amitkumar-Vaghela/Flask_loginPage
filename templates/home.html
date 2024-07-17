@@ -1,44 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Home Page </title>
+	<title>Home Page</title>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
-			background-color: #f0f0f0;
+			background-color: #f0f0f0; 
+			transition: background-color 0.5s;
+			color: #333; /* dark gray text color */
 		}
 		.header {
-			background-color: #333;
-			color: #fff;
+			background-color: #333; /* dark gray background */
+			color: #fff; /* white text color */
 			padding: 20px;
 			text-align: center;
+			transition: background-color 0.5s; /* add transition effect */
 		}
 		.content {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			padding: 20px;
+			background-color: #fff; /* white background */
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow */
+			transition: background-color 0.5s; /* add transition effect */
+		}
+		.social-links {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+		}
+		.social-links li {
+			margin: 10px;
+		}
+		.social-links a {
+			color: #337ab7; /* blue text color */
+			text-decoration: none;
+		}
+		.social-links a:hover {
+			color: #23527c; /* darker blue text color on hover */
+		}
+		
+		/* night mode styles */
+		.night-mode {
+			background-color: #333; /* dark gray background */
+		}
+		.night-mode .header {
+			background-color: #444; /* darker gray background */
+		}
+		.night-mode .content {
+			background-color: #444; /* darker gray background */
+		}
+		.night-mode {
+			color: #fff; /* white text color */
+		}
+		.night-mode .header {
+			color: #fff; /* white text color */
+		}
+		.night-mode .content {
+			color: #fff; /* white text color */
+		}
+		.night-mode .social-links a {
+			color: #fff; /* white text color */
+		}
+		.night-mode .social-links a:hover {
+			color: #ccc; /* light gray text color on hover */
 		}
 	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body>
 	<div class="header">
-		<h1>Welcome to My Home Page of Flask project </h1>
+		<h1>Welcome to My Home Page</h1>
+		<button id="toggle-mode" onclick="toggleMode()">Toggle Night Mode</button>
 	</div>
 	<div class="content">
 		<h2>About Me</h2>
-		<p>I am Amit, a Web Devloper with a passion for Designing Website.</p>
+		<p>I'm Amit Vaghela, a passionate and dedicated software developer with a strong foundation in computer science and a keen interest in artificial intelligence, machine learning, and data science. With a solid understanding of programming languages such as Python, Java, and C++, I'm always looking to expand my skill set and take on new challenges. When I'm not coding, you can find me exploring new technologies, reading about the latest advancements in AI, or contributing to open-source projects.</p>
 		<h2>My Skills</h2>
 		<ul>
 			<li>HTML/CSS</li>
 			<li>JavaScript</li>
 			<li>Python</li>
-      			<li>Java</li>
-      			<li>C</li>
-      			<li>SQL and Database</li>
+			<li>Java</li>
+			<li>C++</li>
 		</ul>
 		<h2>Get in Touch</h2>
-		<p>Contact me at av902959@gmail.com or follow me on github </p>
+		<p>Contact me at:</p>
+		<ul>
+			<li>Phone: 7990382972</li>
+			<li>Email: <a href="mailto:av902959@gmail.com">av902959@gmail.com</a></li>
+		</ul>
+		<ul class="social-links">
+			<li><a href="@AmitVaghela777" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+			<li><a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+			<li><a href="https://github.com/Amitkumar-Vaghela" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+		</ul>
 	</div>
+	
+	<script>
+		function toggleMode() {
+			document.body.classList.toggle("night-mode");
+		}
+	</script>
 </body>
 </html>
+``
