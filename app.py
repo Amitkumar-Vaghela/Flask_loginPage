@@ -5,15 +5,14 @@ from wtffrom.validator import DataRequired , Email , VAlidationError
 
 app =Flask(__name__)
 
-class RegisterForm(FlaskForm):
-    name = StringField (name, validator=[DataRequired()])
-    email = StringField (Email, validator=[DataRequired() , Email()])
-    password = StringField (Password, validator=[DataRequired()])
-    submit =  SubmitField (Register)
 
 @app.route('/')
 def Home():
     return  render_template('home.html') 
+
+@app.route('/login')
+def Login():
+    return  render_template('login.html') 
 
 @app.route('/dashboard')
 def dashboard():
